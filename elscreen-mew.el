@@ -2,11 +2,11 @@
 ;;
 ;; elscreen-mew.el
 ;;
-(defconst elscreen-mew-version "0.1.1 (May 25, 2008)")
+(defconst elscreen-mew-version "0.1.2 (Jun 02, 2008)")
 ;;
 ;; Author:   Takashi Masuda <masutaka@nifty.com>
 ;; Created:  May 20, 2008
-;; Revised:  May 25, 2008
+;; Revised:  Jun 02, 2008
 
 ;; This program is free software; you can redistribute it and/or modify
 ;; it under the terms of the GNU General Public License as published by
@@ -24,6 +24,23 @@
 
 (provide 'elscreen-mew)
 (require 'elscreen)
+
+
+;;; User Customizable Variables:
+
+(defcustom elscreen-mew-mode-to-nickname-alist
+  '(("^mew-draft-mode$" .
+     (lambda ()
+       (format "Mew(%s)" (buffer-name (current-buffer)))))
+    ("^mew-" . "Mew"))
+  "*Alist composed of the pair of mode-name and corresponding screen-name."
+  :type '(alist :key-type string :value-type (choice string function))
+  :tag "Mew major-mode to screen nickname alist"
+  :set (lambda (symbol value)
+         (custom-set-default symbol value)
+         (elscreen-rebuild-mode-to-nickname-alist))
+  :group 'mew)
+(elscreen-set-mode-to-nickname-alist 'elscreen-mew-mode-to-nickname-alist)
 
 
 ;;; Code:
