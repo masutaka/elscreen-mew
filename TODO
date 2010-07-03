@@ -1,0 +1,3 @@
+o ElScreen-WL 相等のことも出来るようにします。
+o elscreen-mew-mode-to-nickname-alist で mew-draft-mode 以外もサポートします。
+o ドキュメントを整備します。
