@@ -2,11 +2,11 @@
 ;;
 ;; elscreen-mew.el
 ;;
-(defconst elscreen-mew-version "0.1.0 (May 20, 2008)")
+(defconst elscreen-mew-version "0.1.1 (May 25, 2008)")
 ;;
 ;; Author:   Takashi Masuda <masutaka@nifty.com>
 ;; Created:  May 20, 2008
-;; Revised:  May 20, 2008
+;; Revised:  May 25, 2008
 
 ;; This program is free software; you can redistribute it and/or modify
 ;; it under the terms of the GNU General Public License as published by
@@ -24,13 +24,12 @@
 
 (provide 'elscreen-mew)
 (require 'elscreen)
-(require 'mew)
 
 
 ;;; Code:
 
-(if (fboundp 'defadvice)
-    (defadvice mew-buffer-message
-      (after mew-buffer-message-after-advice (&rest args) activate)
-      (setq ad-return-value
-	    (format "%s%d" ad-return-value (elscreen-get-current-screen)))))
+(defadvice mew-buffer-message (after
+			       mew-buffer-message-after-advice
+			       activate)
+  (setq ad-return-value
+	(format "%s[%d]" ad-return-value (elscreen-get-current-screen))))
