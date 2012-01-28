@@ -1,6 +1,4 @@
-;; -*- Mode: Emacs-Lisp -*-
-;;
-;; elscreen-mew.el
+;;; elscreen-mew.el --- ???
 ;;
 (defconst elscreen-mew-version "0.1.2 (Jun 02, 2008)")
 ;;
