@@ -1,10 +1,21 @@
-;;; elscreen-mew.el --- ???
+;;; elscreen-mew.el --- ElScreen Add-On for Mew
+
+(defconst elscreen-mew-version "0.1.3 (Mar 04, 2012)")
+
+;;; Commentary:
+
+;; This package is ElScreen Add-On for Mew.
+
+;;; Installation:
+
+;; Put `elscreen-mew.el' in the `load-path' and add
 ;;
-(defconst elscreen-mew-version "0.1.2 (Jun 02, 2008)")
+;;   (require 'elscreen-mew)
 ;;
-;; Author:   Takashi Masuda <masutaka@nifty.com>
-;; Created:  May 20, 2008
-;; Revised:  Jun 02, 2008
+;; to your Mew init file.
+
+;; Author: Takashi Masuda <masutaka.net@gmail.com>
+;; Maintainer: Takashi Masuda <masutaka.net@gmail.com>
 
 ;; This program is free software; you can redistribute it and/or modify
 ;; it under the terms of the GNU General Public License as published by
@@ -20,11 +31,9 @@
 ;; along with this program; see the file COPYING.  If not, write to
 ;; the Free Software Foundation, 675 Mass Ave, Cambridge, MA 02139, USA.
 
-(provide 'elscreen-mew)
 (require 'elscreen)
 
-
-;;; User Customizable Variables:
+;;; Code:
 
 (defcustom elscreen-mew-mode-to-nickname-alist
   '(("^mew-draft-mode$" .
@@ -41,10 +50,11 @@
 (elscreen-set-mode-to-nickname-alist 'elscreen-mew-mode-to-nickname-alist)
 
 
-;;; Code:
-
 (defadvice mew-buffer-message (after
 			       mew-buffer-message-after-advice
 			       activate)
   (setq ad-return-value
 	(format "%s[%d]" ad-return-value (elscreen-get-current-screen))))
+
+(provide 'elscreen-mew)
+;;; elscreen-mew.el ends here
