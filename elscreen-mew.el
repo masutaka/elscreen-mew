@@ -1,7 +1,5 @@
 ;;; elscreen-mew.el --- ElScreen Add-On for Mew
 
-(defconst elscreen-mew-version "0.1.3 (Mar 04, 2012)")
-
 ;;; Commentary:
 
 ;; This package is ElScreen Add-On for Mew.
