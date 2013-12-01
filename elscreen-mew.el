@@ -1,37 +1,39 @@
 ;;; elscreen-mew.el --- ElScreen Add-On for Mew
+;; -*- Mode: Emacs-Lisp -*-
+
+;; Copyright (C) 2013 by Takashi Masuda
+
+;; Author: Takashi Masuda <masutaka.net@gmail.com>
+;; URL: https://github.com/masutaka/elscreen-mew
+;; Version: 1.0.0
+;; Package-Requires: ((elscreen "20120413.1107"))
+
+;; This program is free software: you can redistribute it and/or modify
+;; it under the terms of the GNU General Public License as published by
+;; the Free Software Foundation, either version 3 of the License, or
+;; (at your option) any later version.
+
+;; This program is distributed in the hope that it will be useful,
+;; but WITHOUT ANY WARRANTY; without even the implied warranty of
+;; MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+;; GNU General Public License for more details.
+
+;; You should have received a copy of the GNU General Public License
+;; along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 ;;; Commentary:
-
 ;; This package is ElScreen Add-On for Mew.
 
 ;;; Installation:
-
 ;; Put `elscreen-mew.el' in the `load-path' and add
 ;;
 ;;   (require 'elscreen-mew)
 ;;
 ;; to your Mew init file.
 
-;; Author: Takashi Masuda <masutaka.net@gmail.com>
-;; Maintainer: Takashi Masuda <masutaka.net@gmail.com>
-
-;; This program is free software; you can redistribute it and/or modify
-;; it under the terms of the GNU General Public License as published by
-;; the Free Software Foundation; either version 2, or (at your option)
-;; any later version.
-;;
-;; This program is distributed in the hope that it will be useful,
-;; but WITHOUT ANY WARRANTY; without even the implied warranty of
-;; MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-;; GNU General Public License for more details.
-;;
-;; You should have received a copy of the GNU General Public License
-;; along with this program; see the file COPYING.  If not, write to
-;; the Free Software Foundation, 675 Mass Ave, Cambridge, MA 02139, USA.
+;;; Code:
 
 (require 'elscreen)
-
-;;; Code:
 
 (defcustom elscreen-mew-mode-to-nickname-alist
   '(("^mew-draft-mode$" .
@@ -55,4 +57,5 @@
 	(format "%s[%d]" ad-return-value (elscreen-get-current-screen))))
 
 (provide 'elscreen-mew)
+
 ;;; elscreen-mew.el ends here
