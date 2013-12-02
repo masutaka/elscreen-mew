@@ -1,6 +1,6 @@
 # elscreen-mew.el
 
-## Introduction
+## What's ElScreen?
 
 ElScreenはEmacs上で複数の仮想フレームを取り扱うことが出来るソフトウェアです。
 
@@ -8,7 +8,7 @@ ElScreenはEmacs上で複数の仮想フレームを取り扱うことが出来�
 
 http://www.morishima.net/~naoto/elscreen-ja/
 
-## Summary
+## What's ElScreen-Mew?
 
 ElScreen-Mewを使うとMew-5.2以降との組み合わせで発生する、ウィンドウの分割状態が崩れる現象を回避することが出来ます。
 
