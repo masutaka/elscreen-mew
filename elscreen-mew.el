@@ -5,8 +5,8 @@
 
 ;; Author: Takashi Masuda <masutaka.net@gmail.com>
 ;; URL: https://github.com/masutaka/elscreen-mew
-;; Version: 1.0.0
-;; Package-Requires: ((elscreen "20120413.1107"))
+;; Version: 1.0.1
+;; Package-Requires: ((elscreen "20120413.807"))
 
 ;; This program is free software: you can redistribute it and/or modify
 ;; it under the terms of the GNU General Public License as published by
