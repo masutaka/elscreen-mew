@@ -1,4 +1,4 @@
-# elscreen-mew.el
+# elscreen-mew.el [![melpa badge][melpa-badge]][melpa-link] [![melpa stable badge][melpa-stable-badge]][melpa-stable-link]
 
 ## What's ElScreen?
 
@@ -29,3 +29,8 @@ ElScreen-Mewを使うとMew-5.2以降との組み合わせで発生する、ウ�
 - ElScreen-WL相等のことも出来るようにします。
 - elscreen-mew-mode-to-nickname-alistでmew-draft-mode以外もサポートします。
 - ドキュメントを整備します。
+
+[melpa-link]: http://melpa.org/#/elscreen-mew
+[melpa-stable-link]: http://stable.melpa.org/#/elscreen-mew
+[melpa-badge]: http://melpa.org/packages/elscreen-mew-badge.svg
+[melpa-stable-badge]: http://stable.melpa.org/packages/elscreen-mew-badge.svg
